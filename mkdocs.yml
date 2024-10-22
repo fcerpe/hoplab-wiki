@@ -12,16 +12,26 @@ nav:
     - Practical set-up: get-started/practical-setup.md
     - Computer set-up: get-started/computer-setup.md
     - Administrative procedures: get-started/admin-procedures.md
+    - Student starter pack: get-started/student-starter-pack.md
   - Research:
     - research/index.md
+    - Ethical approval:
+      - research/ethics/index.md
+      - EC onderzoek: research/ethics/MEC.md
+      - SMEC: research/ethics/SMEC.md
     - Coding practices:
       - research/coding/index.md
+    - Behaviour:
+      - research/behaviour/index.md
+      - Find participants: research/behaviour/participants.md
+      - Set up your experiment: research/behaviour/experimental-setup.md
     - fMRI:
       - research/fmri/index.md
       - First steps: research/fmri/fmri-get-started.md
-      - Hospital information: research/fmri/fmri-hospital.md
-      - General information: research/fmri/fmri-general.md
+      - Scanning procedure and info: research/fmri/fmri-procedure.md
       - Analysis workflow: 
+          - research/fmri/analysis/index.md
+          - 0. General information: research/fmri/analysis/fmri-general.md
           - 1. Set-up you environment: research/fmri/analysis/fmri-setup-env.md
           - 2. BIDS conversion: research/fmri/analysis/fmri-bids-conversion.md
           - 3. Pre-processing and QA: research/fmri/analysis/fmri-prepocessing-qa.md
@@ -29,8 +39,6 @@ nav:
           - 5. Regions of interest: research/fmri/analysis/fmri-rois.md
           - 6. Multi-variate analysis: research/fmri/analysis/fmri-mvpa.md
           - fMRI workflow example: research/fmri/analysis/fmri-andrea-workflow.md
-    - Behaviour:
-      - research/behaviour/index.md
     - EEG:
       - research/eeg/index.md
     - Eye-tracking:
@@ -39,7 +47,7 @@ nav:
       - research/dnn/index.md      
   - Science outreach: outreach.md
   - Contribute: contribute.md
-  - Tasks List: tasks-list.md
+#  - Tasks List: tasks-list.md
 
 theme:
   name: material
@@ -73,9 +81,9 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
-    - navigation.expand
+    # - navigation.expand
     - navigation.sections
-    - toc.integrate # (1)!
+    # - toc.integrate # (1)!
     - search.highlight
     - navigation.indexes
 
@@ -122,12 +130,43 @@ plugins:
   - offline
   - privacy
   - search
+  - git-authors
   - git-revision-date-localized:
       type: datetime
       timezone: Europe/Brussels
-  - task-collector:
-      output_file: 'tasks-list.md'
+#  - task-collector:
+#      output_file: 'tasks-list.md'
       
 extra_css:
   - stylesheets/extra.css
   
+extra:
+  consent:
+    title: Cookie consent
+    description: >-
+      Please, consider disabling your ad-blocker and allowing cookies for this Wiki . 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  analytics:
+    provider: google
+    property: G-71T36SYGT2
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            opening a new <a href="https://github.com/HOPLAB-LBP/hoplab-wiki/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">Issue</a>, or contact a Wiki manager.
+            
+copyright: >
+  <a href="#__consent">Change cookie settings</a>            
+      
